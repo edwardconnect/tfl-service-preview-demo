@@ -1,0 +1,1 @@
+export const searchBikePointServiceId = 'SEARCH_BIKE_POINT'

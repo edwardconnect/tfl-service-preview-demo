@@ -8,9 +8,8 @@ const SearchBikePointContent: React.FC = () => {
   const queryClient = useQueryClient()
   const [searchText, setSearchText] = useState('')
   const { refetch: fetchBikePoint, data, isFetching } = useFetchBikePoints(searchText)
-  console.log('data', data)
+  
   useEffect(() => {
-    console.log(queryClient.getQueryData(['tflBikePoints', searchText]))
     if (searchText !== '' && !queryClient.getQueryData(['tflBikePoints', searchText])) {
       fetchBikePoint()
     }
